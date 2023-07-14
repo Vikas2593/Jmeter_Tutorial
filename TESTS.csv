@@ -1,0 +1,12 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1689328098684,200,GetUserLists,200,OK,GetUser 1-1,text,true,,1757,130,1,3,https://reqres.in/api/users?page=2,198,0,142
+1689328098885,127,GetUserLists,200,OK,GetUser 1-1,text,true,,1755,130,1,3,https://reqres.in/api/users?page=2,51,0,0
+1689328099013,47,GetUserLists,200,OK,GetUser 1-1,text,true,,1747,130,1,3,https://reqres.in/api/users?page=2,47,0,0
+1689328099060,55,GetUserLists,200,OK,GetUser 1-1,text,true,,1743,130,1,3,https://reqres.in/api/users?page=2,55,0,0
+1689328099115,48,GetUserLists,200,OK,GetUser 1-1,text,true,,1743,130,1,3,https://reqres.in/api/users?page=2,48,0,0
+1689328098689,548,PostUpdateUser,201,Created,UpdateUser 2-1,text,true,,705,234,1,2,https://reqres.in/api/users,548,0,125
+1689328098687,564,DeleteUser,204,No Content,DeleteSameUser 3-1,,true,,614,213,1,2,https://reqres.in/api/users/495,0,0,128
+1689328099239,423,PostUpdateUser,201,Created,UpdateUser 2-1,text,true,,711,234,1,1,https://reqres.in/api/users,423,0,0
+1689328099668,428,PostUpdateUser,201,Created,UpdateUser 2-1,text,true,,709,234,1,1,https://reqres.in/api/users,428,0,0
+1689328100100,420,PostUpdateUser,201,Created,UpdateUser 2-1,text,true,,711,234,1,1,https://reqres.in/api/users,420,0,0
+1689328100522,456,PostUpdateUser,201,Created,UpdateUser 2-1,text,true,,715,234,1,1,https://reqres.in/api/users,456,0,0
