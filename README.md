@@ -18,6 +18,7 @@ Output directory -> Create an Empty folder and provide the path here
 
 10. Now verify HTML report will be generated in that folder, you can open in Chrome and verify
 
+
 **Running the File via CMD/Command Line**
 
 Go to the Bin folder of Jmeter else define Jmeter globally
@@ -26,16 +27,19 @@ window -> jmeter -n -t C:\Users\HP\Downloads\apache-jmeter-5.6.2\bin\templates\P
 
 mac -> sh jmeter -n -t C:\Users\HP\Downloads\apache-jmeter-5.6.2\bin\templates\ProjectJmeter.jmx -l C:\Users\HP\Downloads\Test_results.csv
 
+
 **commands to see options of command line**
 
 windows -> jmeter -h
 mac -> sh jmeter -h
+
 
 **Run and Generate HTML Report Command**
 
 windows -> jmeter -n -t C:\Users\HP\Downloads\apache-jmeter-5.6.2\bin\templates\ProjectJmeter.jmx -l C:\Users\HP\Downloads\TESTS.csv -e -o C:\Users\HP\Downloads\Reports
 
 mac -> sh jmeter -n -t C:\Users\HP\Downloads\apache-jmeter-5.6.2\bin\templates\ProjectJmeter.jmx -l C:\Users\HP\Downloads\TESTS.csv -e -o C:\Users\HP\Downloads\Reports
+
 
 **Official Documentation and Helpful Links**
 
