@@ -25,14 +25,19 @@ jobs:
       with:
         java-version: '17'
         distribution: 'temurin'
-    - name: Install JMeter
+
+    - name: Install Latest JMeter
       run: |
-          sudo apt-get update
-          sudo apt-get install -y jmeter
-          
+          wget https://downloads.apache.org//jmeter/binaries/apache-jmeter-5.6.3.tgz
+          tar -xzf apache-jmeter-5.6.3.tgz
+          export JMETER_HOME=$PWD/apache-jmeter-5.6.3
+          echo "$JMETER_HOME/bin" >> $GITHUB_PATH
+
     - name: Run JMeter Test
       run: |
           jmeter -n -t ProjectJmeter.jmx -l results.jtl -e -o report
+          ls -la
+          ls -la report || true
 
     - name: Upload Results
       uses: actions/upload-artifact@v4
