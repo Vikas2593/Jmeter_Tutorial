@@ -25,10 +25,11 @@ jobs:
       with:
         java-version: '17'
         distribution: 'temurin'
-    - name: Install Jmeter
-      uses: |
+    - name: Install JMeter
+      run: |
           sudo apt-get update
           sudo apt-get install -y jmeter
+          
     - name: Run JMeter Test
       run: |
           jmeter -n -t ProjectJmeter.jmx -l results.jtl -e -o report
