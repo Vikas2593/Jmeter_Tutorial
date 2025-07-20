@@ -35,7 +35,7 @@ jobs:
           jmeter -n -t ProjectJmeter.jmx -l results.jtl -e -o report
 
     - name: Upload Results
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
           name: jmeter-results
           path: |
