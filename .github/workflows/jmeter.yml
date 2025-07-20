@@ -1,0 +1,43 @@
+# This workflow will build a Java project with Maven, and cache/restore any dependencies to improve the workflow execution time
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-java-with-maven
+
+# This workflow uses actions that are not certified by GitHub.
+# They are provided by a third-party and are governed by
+# separate terms of service, privacy policy, and support
+# documentation.
+
+name: Running the Jmeter Suite with Github Actions
+
+on:
+  push:
+    branches: [ "main" ]
+    
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: checkout the code
+      uses: actions/checkout@v4
+    - name: Set up JDK 17
+      uses: actions/setup-java@v4
+      with:
+        java-version: '17'
+        distribution: 'temurin'
+    - name: Install Jmeter
+      uses: |
+          sudo apt-get update
+          sudo apt-get install -y jmeter
+    - name: Run JMeter Test
+      run: |
+          jmeter -n -t ProjectJmeter.jmx -l results.jtl -e -o report
+
+    - name: Upload Results
+      uses: actions/upload-artifact@v3
+      with:
+          name: jmeter-results
+          path: |
+            results.jtl
+            report/
+
